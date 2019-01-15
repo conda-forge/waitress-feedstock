@@ -1,6 +1,6 @@
 {% set name = "waitress" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "d33cd3d62426c0f1b3cd84ee3d65779c7003aae3fc060dee60524d10a57f05a9" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "e624c829656ffc99b33d661072b2814885ae92835cf835ee8ab283ddb7c915b9" %}
 
 package:
   name: {{ name|lower }}
