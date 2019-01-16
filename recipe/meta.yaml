@@ -1,20 +1,18 @@
 {% set name = "waitress" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "d33cd3d62426c0f1b3cd84ee3d65779c7003aae3fc060dee60524d10a57f05a9" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: e624c829656ffc99b33d661072b2814885ae92835cf835ee8ab283ddb7c915b9
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - waitress-serve = waitress.runner:run
 
@@ -22,7 +20,6 @@ requirements:
   build:
     - python >=2.7
     - pip
-    - setuptools
   run:
     - python >=2.7
 
