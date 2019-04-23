@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About waitress
 ==============
 
@@ -23,8 +19,17 @@ It supports HTTP/1.0 and HTTP/1.1.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/waitress-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/waitress-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5858&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/waitress-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
