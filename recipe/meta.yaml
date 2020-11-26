@@ -1,5 +1,5 @@
 {% set name = "waitress" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 045b3efc3d97c93362173ab1dfc159b52cfa22b46c3334ffc805dbdbf0e4309e
+  sha256: 1bb436508a7487ac6cb097ae7a7fe5413aefca610550baf58f0940e51ecfb261
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - waitress-serve = waitress.runner:run
 
@@ -34,7 +34,7 @@ about:
   license: ZPL-2.0
   license_family: OTHER
   license_file: LICENSE.txt
-  summary: 'Production-quality pure-Python WSGI server'
+  summary: Production-quality pure-Python WSGI server
   description: |
     Waitress is meant to be a production-quality pure-Python WSGI server with
     very acceptable performance. It has no dependencies except ones which live
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - carlodri
+    - xhochy
