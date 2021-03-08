@@ -1,5 +1,5 @@
 {% set name = "waitress" %}
-{% set version = "1.4.4" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1bb436508a7487ac6cb097ae7a7fe5413aefca610550baf58f0940e51ecfb261
+  sha256: 69e1f242c7f80273490d3403c3976f3ac3b26e289856936d1f620ed48f321897
 
 build:
   noarch: python
@@ -17,11 +17,11 @@ build:
     - waitress-serve = waitress.runner:run
 
 requirements:
-  build:
-    - python >=2.7
+  host:
+    - python >=3.6
     - pip
   run:
-    - python >=2.7
+    - python >=3.6
 
 test:
   imports:
